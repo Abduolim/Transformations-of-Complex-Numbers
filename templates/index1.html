@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nuqta</title>
+    <title>Point</title>
 </head><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,10 +89,10 @@
     </style>
 </head>
 <body>
-    <h1>Complex Reflection Function</h1>
+    <h1>Transformations of Complex Numbers: w=az+b</h1>
     <form method="post" id="complexForm" onsubmit="return validateForm()">
         <label for="a">Enter a:</label>
-        <input type="text" id="a" name="a" placeholder="e.g., 2+1j" required>
+        <input type="text" id="a" name="a" placeholder="e.g., 2+j" required>
         <label for="b">Enter b:</label>
         <input type="text" id="b" name="b" placeholder="e.g., -2j" required>
         <label for="z">Enter z:</label>
@@ -104,12 +104,14 @@
          </div>
 </form>
 
-    {% if result %}
+    {% if a and b  and z and w and n %}
         <div id="result">
+            <p>z = {{z}}</p>
             <h2>Result</h2>
-            <p>{{ result }}</p>
-            <h2><p>{{ result2 }}</p></h2>
-            <p>{{ result3 }}</p>
+             <p>w = az+b</p>
+            <p>w = {{ a }}z + {{b}}</p>
+            <h2><p>w = {{ w }}</p></h2>
+            <p>{{ n }}</p>
             <img src="data:image/png;base64,{{ plot }}" alt="Plot">
         </div>
     {% endif %}

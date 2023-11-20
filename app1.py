@@ -57,8 +57,7 @@ def index1():
         plt.close()
 
         # Display result and plot in the template
-        return render_template('index1.html', result=f'a={a}, b={b}, z={z}', result2=f'w = {w}', result3=n,
-                               plot=img_base64)
+        return render_template('index1.html', a=a, b=b, z=z, w=w, n=n, plot=img_base64)
 
     # Display the form if it's a GET request
     return render_template('index1.html')
@@ -73,11 +72,11 @@ def calculate_result(z, w):
     w_abs = abs(w)
 
     if w_abs > z_abs:
-        return f"z vektor {w_abs / z_abs:.3f}... marta kattalashdi"
+        return f"The z vector has increased by  {w_abs / z_abs:.3f}... times"
     elif w_abs < z_abs:
-        return f"z vektor {z_abs / w_abs:.3f}... marta kichraydi"
+        return f"The z vector ha decreased by  {z_abs / w_abs:.3f}... times"
     else:
-        return "O'zgarmadi"
+        return "Did not change."
 
 
 if __name__ == '__main__':

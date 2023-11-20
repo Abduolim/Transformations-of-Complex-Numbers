@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aylana</title>
+    <title>Circle</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -87,7 +87,7 @@
     </style>
 </head>
 <body>
-    <h1>Circle and Linear Function</h1>
+    <h1>Transformations of Complex Numbers: w=az+b</h1>
     <form method="post">
         <label for="center">Enter center of the circle (o):</label>
         <input type="text" id="center" name="center" placeholder="e.g., 2+1j" required>
@@ -105,10 +105,11 @@
 
     {% if final_circle_center and final_circle_radius and o and r and a and b %}
         <div id="result">
+            <h2 style="color:blue;">Orginal circle</h2>
             <p> |z - {{ o }}| ≤ {{ r }} </p>
-            <h3>Linear function</h3>
+            <h2>Linear function</h2>
             <p> w = {{ a }} z + {{ b }} </p>
-            <h2>Result</h2>
+            <h2 style="color:red;">Final circle</h2>
             <p> |z - {{ final_circle_center }}| ≤ {{ final_circle_radius }} </p>
             <img src="data:image/png;base64,{{ plot }}" alt="Plot">
         </div>

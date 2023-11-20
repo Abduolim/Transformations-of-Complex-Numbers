@@ -15,12 +15,6 @@ def plot_circle(center, radius, label=None, color='blue'):
     plt.scatter(center.real, center.imag, color=color)  # Mark center with a dot
 
 
-def plot_line(a, b, label=None):
-    z = np.linspace(-10, 10, 100)
-    w = a * z + b
-    plt.plot(z, w, label=label)
-
-
 @app3.route('/', methods=['GET', 'POST'])
 def index3():
     if request.method == 'POST':
@@ -42,7 +36,7 @@ def index3():
         if o != 0:
             new_radius = r * abs(a)
             new_center_shifted = a * o + b
-            plot_circle(new_center_shifted, new_radius, label='Final Circle', color='orange')
+            plot_circle(new_center_shifted, new_radius, label='Final Circle', color='red')
 
             plt.axis('equal')
 
@@ -80,7 +74,7 @@ def index3():
             plt.close()
 
             return render_template('index3.html', final_circle_center=final_circle_center,
-                                   final_circle_radius=final_circle_radius, plot=img_base64)
+                                   final_circle_radius=round(final_circle_radius, 3), plot=img_base64)
 
     return render_template('index3.html')
 

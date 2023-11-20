@@ -47,7 +47,7 @@ def index2():
 
             plt.scatter(np.real(polygon_points), np.imag(polygon_points), label="Orginal Points", marker='o',
                         color='b')
-            plt.scatter(np.real(reflected_points), np.imag(reflected_points), label="Reflection Points",
+            plt.scatter(np.real(reflected_points), np.imag(reflected_points), label="Final Points",
                         marker='x', color='r')
 
             polygon_points.append(polygon_points[0])
@@ -59,9 +59,9 @@ def index2():
             plt.ylabel('Imaginary')
             plt.legend()
             if n == 2:
-                plt.title("2 nuqta orasidagi kesma va uni aksi")
+                plt.title("")
             else:
-                plt.title(f'{n} burchakli ko\'pburchak va uni aksi')
+                plt.title(f'')
             plt.grid(True)
 
             # Save the plot to a BytesIO object

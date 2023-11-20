@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chiziq</title>
+    <title>Polygon</title>
 </head>
 <body>
 
@@ -128,7 +128,7 @@
     </style>
 </head>
 <body>
-    <h1>Reflection Function Plot</h1>
+    <h1>Transformations of Complex Numbers: w=az+b</h1>
     <form method="post">
         <label for="a">Enter a:</label>
         <input type="text" id="a" name="a" placeholder="e.g., 2+1j" required>
@@ -136,6 +136,7 @@
         <input type="text" id="b" name="b" placeholder="e.g., 1-2j" required>
         <label for="n">Enter the number of points (n &ge; 2):</label>
         <input type="number" id="n" name="n" min="2" required>
+        <p style="color:red;">Enter the points of the polygon you want to insert in sequence!</p>
         <div id="points-container"></div>
         <button type="button" onclick="addPoints()">Add Points</button>
         <div class="button-container">
@@ -157,7 +158,7 @@
     <table>
         <tr>
             <th>Orginal Points</th>
-            <th>Reflected Points</th>
+            <th>Final Points</th>
         </tr>
         <tr>
             <td>
