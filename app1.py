@@ -17,10 +17,6 @@ def index1():
         w = reflection_function(a, b, z)
         n = calculate_result(z, w)
 
-        # Create a plot
-        plt.figure(figsize=(10, 5))
-        # ... Your existing plot code ...
-
         # Grafik
         z_real, z_imag = np.real(z), np.imag(z)
         w_real, w_imag = np.real(w), np.imag(w)
@@ -28,6 +24,7 @@ def index1():
         # chizma yaratish
         plt.figure(figsize=(10, 5))
         plt.grid(True, linestyle='--', alpha=0.5, which='both', linewidth=0.5)
+
         # koordinata o'lchami
         real_min = min(z_real, w_real, 0) - 1
         real_max = max(z_real, w_real, 0) + 1
@@ -72,9 +69,9 @@ def calculate_result(z, w):
     w_abs = abs(w)
 
     if w_abs > z_abs:
-        return f"The z vector has increased by  {w_abs / z_abs:.3f}... times"
+        return f"The z vector has increased by  {w_abs / z_abs:.3f} times"
     elif w_abs < z_abs:
-        return f"The z vector ha decreased by  {z_abs / w_abs:.3f}... times"
+        return f"The z vector ha decreased by  {z_abs / w_abs:.3f} times"
     else:
         return "Did not change."
 
