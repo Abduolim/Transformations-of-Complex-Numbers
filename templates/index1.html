@@ -104,14 +104,14 @@
          </div>
 </form>
 
-    {% if a and b  and z and w and n %}
+    {% if a and b  and z and w %}
         <div id="result">
+            <p>a={{a}}, b={{b}}</p>
             <p>z = {{z}}</p>
             <h2>Result</h2>
              <p>w = az+b</p>
             <p>w = {{ a }}z + {{b}}</p>
             <h2><p>w = {{ w }}</p></h2>
-            <p>{{ n }}</p>
             <img src="data:image/png;base64,{{ plot }}" alt="Plot">
         </div>
     {% endif %}
