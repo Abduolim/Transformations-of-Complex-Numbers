@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
+import  webbrowser
 
 app1 = Flask(__name__)
 
@@ -54,7 +55,7 @@ def index1():
         plt.close()
 
         # Display result and plot in the template
-        return render_template('index1.html', a=a, b=b, z=z, w=w, n=n, plot=img_base64)
+        return render_template('index1.html', a=a, b=b, z=z, w=w, plot=img_base64)
 
     # Display the form if it's a GET request
     return render_template('index1.html')
@@ -77,4 +78,6 @@ def calculate_result(z, w):
 
 
 if __name__ == '__main__':
-    app1.run(debug=True)
+    webbrowser.open('http://localhost:5000')
+
+    app1.run(port=5000, debug=True)

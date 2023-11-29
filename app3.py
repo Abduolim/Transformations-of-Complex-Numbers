@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import base64
 from io import BytesIO
+import webbrowser
 
 app3 = Flask(__name__)
 
@@ -80,4 +81,6 @@ def index3():
 
 
 if __name__ == '__main__':
-    app3.run(debug=True)
+    webbrowser.open('http://localhost:5002')
+
+    app3.run(port=5002, debug=True)
