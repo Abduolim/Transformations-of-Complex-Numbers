@@ -12,7 +12,6 @@ app = Flask(__name__)
 def main_menu():
     return render_template('index.html')
 
-#hello
 @app.route('/app1', methods=['GET', 'POST'])
 def app1():
     if request.method == 'POST':
